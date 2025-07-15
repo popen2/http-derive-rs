@@ -1,0 +1,18 @@
+[package]
+name = "http-derive"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+homepage = "https://github.com/popen2/http-derive-rs"
+description = "Derive macro for implementing `Into<http::StatusCode>` for your enums using the standard http types."
+readme = "../README.md"
+
+[features]
+default = []
+http-1 = ["dep:http-1", "http-derive-impl/http-1"]
+http-02 = ["dep:http-02", "http-derive-impl/http-02"]
+
+[dependencies]
+http-derive-impl = { path = "../http-derive-impl", version = "0.1.0" }
+http-1 = { optional = true, package = "http", version = "1" }
+http-02 = { optional = true, package = "http", version = "0.2" }

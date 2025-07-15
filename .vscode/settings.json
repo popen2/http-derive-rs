@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 2,
+    "rust-analyzer.linkedProjects": [
+        "./http-derive/Cargo.toml",
+        "./http-derive-impl/Cargo.toml"
+    ]
+}
